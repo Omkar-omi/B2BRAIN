@@ -17,7 +17,7 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
-<body class="user-select-none">
+<body class="user-select-none p-0 m-0">
   <div class="container-fluid p-0">
     <div class="row p-0 m-0">
       <!-- main sidebar when screen is xxl -->
@@ -213,7 +213,7 @@
           <div class="pt-3 pb-3 text-color float-start">
             <i class="bi bi-search ms-4 icon-color" id="searchIcon"></i>
             <i class="bi bi-x ms-4 icon-x " id="searchClose"></i>
-            <input type="text" class="decoration-none me-5" id="search-text"
+            <input type="text" class="decoration-none " id="search-text"
               placeholder="Search by account name or website">
           </div>
           <div class="d-flex">
@@ -221,18 +221,18 @@
               <i class="bi bi-bell icon-color"></i>
               <span class="position-absolute top-10 start-100 translate-middle rounded-circle bg-danger p-1"></span>
             </div>
-            <div class="d-flex justify-content-center mt-3 position-relative ms-2 profile-pic me-lg-3 me-1">
+            <div class="d-flex justify-content-center mt-3 position-relative ms-2 profile-pic me-lg-3 me-2">
             </div>
           </div>
         </searchbar>
         <div class="container-fluid search-results-container" id="search-div-main">
-          <div class="row">
-            <div class="col-lg-9 p-0" id="saContainer">
-              <div class="fs-4 qaText pt-5 ms-lg-5 ">Similar Accounts</div>
-              <div id="search-div" class="d-flex flex-column flex-lg-wrap search-results ms-lg-5 ms-1"></div>
+          <div class="row m-0 p-0">
+            <div class="col-md-8 p-0" id="saContainer">
+              <div class="fs-4 qaText pt-5 ms-lg-5 ms-1">Similar Accounts</div>
+              <div id="search-div" class="d-flex flex-column flex-xl-wrap search-results ms-lg-5 ms-1"></div>
             </div>
-            <div class="ms-5 col-lg-2 pt-5">
-              <div class="pb-4 fs-4 me-5 qaText">Quick Actions</div>
+            <div class="ps-5 col-md-3 pt-5">
+              <div class="pb-4 fs-4  qaText">Quick Actions</div>
               <div class="pb-4 text">Track new account</div>
               <div class="pb-4 text">Bulk track accounts</div>
               <div class="pb-4 text">Manage accounts</div>

@@ -33,7 +33,7 @@ const useraction = async (searchText) => {
             imgDiv.setAttribute("class", "position-relative");
             let initial = document.createTextNode(element.company[0]);
             let initialDiv = document.createElement("div");
-            initialDiv.setAttribute("class", "position-absolute top-50 start-50 translate-middle company-initial");
+            initialDiv.setAttribute("class", "position-absolute  company-initial");
             initialDiv.appendChild(initial);
             imgDiv.appendChild(initialDiv);
             let companyImage = document.createElement("img");
@@ -52,11 +52,11 @@ const useraction = async (searchText) => {
             cardDiv.appendChild(imgDiv);
         }
         let infoContainer = document.createElement("div");
-        infoContainer.setAttribute("class", "ms-4 align-items-center flex-grow-1 ");
+        infoContainer.setAttribute("class", "ms-lg-4 ms-3 align-items-center flex-grow-1 ");
         let companyName = document.createElement("div");
         let cName = document.createTextNode(element.company);
         companyName.appendChild(cName);
-        companyName.setAttribute("class", "company-name");
+        companyName.setAttribute("class", "text-wrap company-name");
         let companyWebsite = document.createElement("div");
         let website = document.createTextNode(element.website);
         companyWebsite.setAttribute("class", "website");
@@ -102,6 +102,9 @@ inputField.addEventListener("focus", () => {
     searchClose.style.display = "inline-block";
     sidebarContainer.style.height = "850px"
 
+})
+inputField.addEventListener("blur", () => {
+    sidebarContainer.style.height = "1420px"
 })
 //search close function
 document.getElementById("searchClose").onclick = () => {
