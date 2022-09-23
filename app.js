@@ -3,6 +3,7 @@ const inputField = document.getElementById("search-text");
 const searchClose = document.getElementById("searchClose");
 const searchIcon = document.getElementById("searchIcon");
 const mainSearchDiv = document.getElementById("search-div-main");
+const sidebarContainer = document.getElementById("sidebar-container")
 
 
 //arrow rotate function
@@ -25,7 +26,7 @@ const useraction = async (searchText) => {
     obj.forEach(element => {
         let contDiv = document.getElementById("search-div");
         let cardDiv = document.createElement("div");
-        cardDiv.setAttribute("class", "pt-3 d-flex d-inline-flex flex-columns pb-4 pe-5 width");
+        cardDiv.setAttribute("class", "pt-3 d-flex d-inline-flex flex-columns pb-4 pe-lg-5 card-div-width");
         cardDiv.setAttribute("id", "delete");
         if (element.logo == "") {
             let imgDiv = document.createElement("div");
@@ -51,7 +52,7 @@ const useraction = async (searchText) => {
             cardDiv.appendChild(imgDiv);
         }
         let infoContainer = document.createElement("div");
-        infoContainer.setAttribute("class", "ms-4 align-items-center  flex-grow-1 ");
+        infoContainer.setAttribute("class", "ms-4 align-items-center flex-grow-1 ");
         let companyName = document.createElement("div");
         let cName = document.createTextNode(element.company);
         companyName.appendChild(cName);
@@ -99,6 +100,7 @@ inputField.addEventListener("focus", () => {
     mainSearchDiv.style.display = "block";
     searchIcon.style.display = "none";
     searchClose.style.display = "inline-block";
+    sidebarContainer.style.height = "850px"
 
 })
 //search close function
