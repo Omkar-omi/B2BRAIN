@@ -3,9 +3,18 @@
     box-sizing: border-box;
 }
 
-.sidebar-container {
-    z-index: 1;
-    height: 1420px;
+#sidebar-container {
+    z-index: 2;
+    width: 250px;
+}
+
+.shadow-sidebar-container {
+    z-index: 2;
+    box-shadow: -15px 0 50px -2px #888
+}
+
+.shadow-search-container {
+    box-shadow: 0px -10px 50px -2px #888
 }
 
 .sidebar-dropdown-list {
@@ -85,8 +94,6 @@
 .decoration-none {
     border: 0;
     color: rgb(224, 218, 218);
-    min-width: 182px;
-
 }
 
 input::placeholder {
@@ -179,45 +186,31 @@ input:focus {
     z-index: 100;
 }
 
-@media screen and (max-width: 600px) {
+@media(max-width: 600px) {
     #woman-excited {
-        height: 200px;
-        width: 250px;
+        height: 300px;
+        width: 350px;
     }
 }
 
 @media (max-width: 1090px) {
     #saContainer {
-        height: 1200px;
-    }
-
-    .card-div-width {
-        width: 290px;
+        height: 1100px;
     }
 }
 
-@media (min-width: 1400px) {
-    .nav-none {
-        display: none;
-
-    }
-
-    .decoration-none {
-        width: 800px;
+@media (max-width: 1439px) {
+    .search-results {
+        height: 700px;
     }
 }
 
-@media (min-width: 525px) {
-    .decoration-none {
-        width: 400px;
+@media (max-width: 1439px) {
+    .search-results {
+        height: 1100px;
     }
 
-
-}
-
-@media (max-width: 1399px) {
     .sidebar-container {
-        display: none;
+        height: 1100;
     }
-
 }

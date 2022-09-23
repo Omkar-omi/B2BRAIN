@@ -26,7 +26,7 @@ const useraction = async (searchText) => {
     obj.forEach(element => {
         let contDiv = document.getElementById("search-div");
         let cardDiv = document.createElement("div");
-        cardDiv.setAttribute("class", "pt-3 d-flex d-inline-flex flex-columns pb-4 pe-lg-5 card-div-width");
+        cardDiv.setAttribute("class", "pt-3 d-flex d-inline-flex flex-columns pb-4 pe-5 card-div-width");
         cardDiv.setAttribute("id", "delete");
         if (element.logo == "") {
             let imgDiv = document.createElement("div");
@@ -52,7 +52,7 @@ const useraction = async (searchText) => {
             cardDiv.appendChild(imgDiv);
         }
         let infoContainer = document.createElement("div");
-        infoContainer.setAttribute("class", "ms-lg-4 ms-3 align-items-center flex-grow-1 ");
+        infoContainer.setAttribute("class", "ms-4 ms-3 align-items-center flex-grow-1 ");
         let companyName = document.createElement("div");
         let cName = document.createTextNode(element.company);
         companyName.appendChild(cName);
@@ -100,11 +100,6 @@ inputField.addEventListener("focus", () => {
     mainSearchDiv.style.display = "block";
     searchIcon.style.display = "none";
     searchClose.style.display = "inline-block";
-    sidebarContainer.style.height = "850px"
-
-})
-inputField.addEventListener("blur", () => {
-    sidebarContainer.style.height = "1420px"
 })
 //search close function
 document.getElementById("searchClose").onclick = () => {
@@ -122,6 +117,7 @@ document.getElementById("searchClose").onclick = () => {
     });
     inputField.value = "";
 }
+//tracking buttons
 document.addEventListener("click", e => {
     if (e.target && e.target.id == "track") {
         e.target.classList.add("tracking-button")
