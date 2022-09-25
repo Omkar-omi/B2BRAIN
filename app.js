@@ -3,7 +3,7 @@ const inputField = document.getElementById("search-text");
 const searchClose = document.getElementById("searchClose");
 const searchIcon = document.getElementById("searchIcon");
 const mainSearchDiv = document.getElementById("search-div-main");
-const sidebarContainer = document.getElementById("sidebar-container")
+const searchDiv = document.getElementById("search-div")
 
 
 //arrow rotate function
@@ -38,6 +38,7 @@ const useraction = async (searchText) => {
             imgDiv.appendChild(initialDiv);
             let companyImage = document.createElement("img");
             companyImage.style.backgroundColor = element.color;
+            companyImage.setAttribute("class", "logo")
             companyImage.setAttribute("height", "50");
             companyImage.setAttribute("width", "50");
             imgDiv.appendChild(companyImage);
@@ -46,6 +47,7 @@ const useraction = async (searchText) => {
             let imgDiv = document.createElement("div");
             let companyImage = document.createElement("img");
             companyImage.src = element.logo;
+            companyImage.setAttribute("class", "logo")
             companyImage.setAttribute("height", "50");
             companyImage.setAttribute("width", "50");
             imgDiv.appendChild(companyImage);
@@ -76,6 +78,7 @@ const useraction = async (searchText) => {
         cardDiv.appendChild(infoContainer);
         cardDiv.appendChild(button);
         contDiv.appendChild(cardDiv);
+
     });
 }
 
@@ -100,6 +103,7 @@ inputField.addEventListener("focus", () => {
     mainSearchDiv.style.display = "block";
     searchIcon.style.display = "none";
     searchClose.style.display = "inline-block";
+
 })
 //search close function
 document.getElementById("searchClose").onclick = () => {
@@ -116,6 +120,7 @@ document.getElementById("searchClose").onclick = () => {
         element.remove();
     });
     inputField.value = "";
+
 }
 //tracking buttons
 document.addEventListener("click", e => {
